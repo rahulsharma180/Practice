@@ -8,10 +8,12 @@
 
 // menuCloseButton.addEventListener("click", ()=>
 //     menuOpenButton.click() );
-
-const menuCloseButton = document.querySelector("#menu-close-button");
-const menuOpenButton = document.querySelector("#menu-open-button");
+const navbarLinks = document.querySelectorAll(".nav-link");
 const navMenu = document.querySelector(".nav-menu");
+const menuOpenButton = document.querySelector("#menu-open-button");
+const menuCloseButton = document.querySelector("#menu-close-button");
+
+
 menuOpenButton.addEventListener("click", ()=>{
     console.log("CLick")
     navMenu.classList.toggle("show-mobile-menu")
@@ -19,7 +21,9 @@ menuOpenButton.addEventListener("click", ()=>{
     menuCloseButton.addEventListener("click", ()=>
             menuOpenButton.click() );
 
-
+    navbarLinks.forEach((link) => {
+        link.addEventListener("click", () => menuCloseButton.click());
+      });
 //     const menuOpenButton = document.querySelector("#menu-open-button");
 // const menuCloseButton = document.querySelector("#menu-close-button");
 // const navMenu = document.querySelector(".nav-menu");

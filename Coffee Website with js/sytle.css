@@ -10,7 +10,7 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+/********************************************************************* Root Code Start *********************************************************/
 :root {
     /* Colors */
     --white-color: #fff;
@@ -42,7 +42,7 @@
     /* Site max width */
     --site-max-width: 1300px;
 }
-
+/********************************************************************* Root Code End *************************************************************/
 html {
     scroll-behavior: smooth;
 }
@@ -73,6 +73,24 @@ header {
 
 }
 
+
+
+ .section-title {
+    text-align: center;
+    text-transform: uppercase;
+  
+  }
+  
+  .section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 1px auto 0;
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-s);
+  }
+/********************************************************************* Navbar Code Start *********************************************************/
 
 .navbar .nav-logo .logo-text {
     color: var(--white-color);
@@ -112,6 +130,12 @@ header {
     gap: 10px;
 }
 
+
+
+/*********************************************************************** Navbar Code End *********************************************************/
+
+
+/*********************************************************************** Hero Code Start *********************************************************/
 .banner-section {
     background-color: var(--primary-color);
     min-height: 100vh;
@@ -185,88 +209,139 @@ header {
 .navbar .nav-menu.show-mobile-menu {
     left: 0; /* Show menu when class is added */
 }
-@media screen and (max-width:900px) {
-    :root {
-        /* Font size */
 
-        --font-size-m: 1rem;
-        --font-size-l: 1.3rem;
-        --font-size-xl: 1.5rem;
-        --font-size-xxl: 1.8rem;
 
-    }
-    /* body.show-mobile-menu header::before {
-        content: "";
-        position: fixed;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        backdrop-filter: blur(5px);
-        background: rgba(0, 0, 0, 0.2);
-    } */
-    .navbar :is(#menu-open-button, #menu-close-button) {
-        font-size: var(--font-size-l);
-        display: block;
-      }
+/************************************************************************ Hero Code End **********************************************************/
+
+
+
+/********************************************************************** About Code Start *********************************************************/
+.about-section {
+    background: var(--light-pink-color);
+    min-height: 80vh;
+    padding: 100px;
+    margin: auto;
     
-
-    .navbar #menu-close-button {
-        position: absolute;
-        right: 30px;
-        top: 30px;
-
-    }
-    .navbar #menu-open-button {
-         color: var(--white-color);
-
-    }
-    .navbar .nav-menu {
-        display: block;
-        background-color: var(--white-color);
-        color: var(--primary-color);
-        position: fixed;
-        left:-300px;
-        top: 0;
-        width: 300px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 100px;
-        transition: left 0.2s ease;
-
-    }
-
-    /* body.show-mobile-menu .navbar .nav-menu {
-        left: 0;
-    } */
-
-    .navbar .nav-menu .nav-link {
-        color: var(--dark-color);
-        font-size: var(--font-size-l);
-        margin-top: 17px;
-        display: block;
-
-    }
-
-    .banner-section .section-content{
-        flex-direction: column-reverse;
-        justify-content: center;
-        text-align: center;
-        gap: 50px;
-        padding: 30px 20px 20px;
-
-    }
-    .banner-section .section-content :is(.subtitle,.descrption){
-        max-width: 100%;
-    }
-    .banner-section .second-image-wrapper{
-        width: 270px;
-        margin-right: 0;
-        margin-top: 50px;
-    }
-    .banner-section .buttons{
-       justify-content: center;
-    }
 }
+.about{
+    /* border: 1px solid red ; */
+    max-width: var(--site-max-width);
+    min-height: 60vh;
+    display: flex;
+    gap: 20px;
+    
+}
+.aboutimg{
+    /* border: 1px solid rgb(55, 158, 14) ; */
+    width: 49%;
+    align-items: center;
+    min-height: 60vh; 
+    display: flex;
+   
+}
+.myabout{
+    /* border: 1px solid rgb(158, 43, 14) ; */
+    width: 400px;
+    height: 400px;
+}
+.myabout img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 600px;
+    
+   
+}
+.aboutcontent{
+    width:  60%;
+    margin: 50px 0px 0px 0px;
+    /* border: 1px solid rgb(255, 0, 0) ;   */
+   
+}
+.aboutheading{
+    padding: 60px 10px 20px;
+    font-size: 20px;
+}
+.about-text{
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: var(--font-size-m);
+    /* border: 1px solid rgb(30, 255, 0) ;   */
+}
+.social-link-list{
+    padding-top: 20px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+.social-link{
+    color: var(--primary-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+.social-link :hover{
+    color:var(--secondary-color);
+    cursor: pointer;
+}
+/********************************************************************** About Code End ***********************************************************/
+
+/********************************************************************** Food Menu Code Start *****************************************************/
+.food-menu-section{
+    /* border: 1px solid red; */
+    background: var(--dark-color);
+     margin: auto;
+}
+.menu-heading{
+    padding-top: 100px;
+    color:var(--white-color);
+    font-size: var(--font-size-xl);
+}
+
+.food-menu {
+    color: var(--white-color);
+    background: var(--dark-color);
+    padding: 50px 0 100px;
+    margin: 0px 100px;
+    /* border: 1px solid rgb(43, 255, 0); */
+  }
+  
+.food-menu .menu-list {
+    display: flex;
+    gap: 90px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    
+  }
+  
+ .menu-list .menu-item {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: calc(100% / 3 - 90px);
+ 
+  }
+  
+ .menu-list .menu-item .menu-image {
+    width: 83%;
+    aspect-ratio: 1;
+    margin-bottom: 15px;
+    object-fit: contain;
+  }
+  
+.food-menu .menu-list .menu-item .name {
+    margin: 12px 0;
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-semibold);
+  }
+  
+.food-menu .menu-list .menu-item .text {
+    font-size: var(--font-size-m);
+    /* border: 1px solid red; */
+  }
+/********************************************************************** Food Menu Code End *******************************************************/
+/********************************************************************** Testiminoal Code End ****************************************************/
