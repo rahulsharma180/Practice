@@ -68,6 +68,12 @@ const swiper = new Swiper(".slider-wrapper", {
     prevEl: ".swiper-button-prev",
   },
 
+   // Autoplay settings
+   autoplay: {
+    delay: 1600, // 3 seconds delay between slides
+    disableOnInteraction: false, // Continue autoplay after user interaction
+  },
+
   /* Responsive breakpoints */
   breakpoints: {
     0: {
