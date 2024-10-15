@@ -73,20 +73,25 @@ header {
 
 }
 
-
-
- .section-title {
-    text-align: center;
-    text-transform: uppercase;
-  
+:where(section, footer) .section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
   }
   
-  .section-title::after {
+  section .section-title {
+    text-align: center;
+    padding: 60px 0 100px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+  }
+  
+  section .section-title::after {
     content: "";
     width: 80px;
     height: 5px;
     display: block;
-    margin: 1px auto 0;
+    margin: 10px auto 0;
     background: var(--secondary-color);
     border-radius: var(--border-radius-s);
   }
@@ -231,6 +236,9 @@ header {
     gap: 20px;
     
 }
+.about-section .aboutcontent .section-title {
+    padding: 0;
+  }
 .aboutimg{
     /* border: 1px solid rgb(55, 158, 14) ; */
     width: 49%;
@@ -265,6 +273,7 @@ header {
 .about-text{
     padding: 10px 10px 10px 10px;
     text-align: center;
+    margin: 50px 0 30px;
     font-size: var(--font-size-m);
     /* border: 1px solid rgb(30, 255, 0) ;   */
 }
@@ -345,3 +354,178 @@ header {
   }
 /********************************************************************** Food Menu Code End *******************************************************/
 /********************************************************************** Testiminoal Code End ****************************************************/
+
+.testimonials-section {
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+    /* border: 1px solid red; */
+  }
+    
+
+.testimonials-section .slider-wrapper {
+        overflow: hidden;
+        margin: 0 60px 50px;
+        
+ }
+     
+ .testimonials-section .testimonial {
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    /* border: 1px solid red;    */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+
+.testimonials-section .testimonial .user-image{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+.testimonials-section .testimonial .name {
+    margin-bottom: 16px;
+    font-size: var(--font-size-m);
+  }
+  
+  .testimonials-section .testimonial .feedback {
+    line-height: 25px;
+  }
+  
+  .testimonials-section .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    background: var(--secondary-color);
+  }
+  
+  .testimonials-section .swiper-slide-button {
+    color: var(--secondary-color);
+    margin-top: -50px;
+    transition: 0.3s ease;
+  }
+  
+  .testimonials-section .swiper-slide-button:hover {
+    color: var(--primary-color);
+  }
+
+ /********************************************************************** Testiminoal Code End ****************************************************/
+ /********************************************************************** Gallary Code Start ******************************************************/
+ .gallery-section {
+    padding: 50px 0 100px;
+  }
+  
+ .gallery-list{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid rgb(16, 214, 148); */
+    gap: 12px;
+    justify-content: center;
+    
+}
+  
+.gallery-item{
+  /* border: 1px solid red; */
+  overflow: hidden;
+  border-radius: var(--border-radius-s);
+  width: calc(100% / 3 - 12px);
+ 
+}
+.gallery-item .gallery-image{
+   width: 100%;
+   height: 100%;
+   cursor: zoom-in;
+   transition: 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.3);
+  }
+  
+.contact-section{
+    padding: 50px 0 100px;
+    background: var(--light-pink-color);
+    /* border: 1px solid red; */
+}
+
+
+  
+ .contact-section .section-content {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+  }
+ 
+  
+  .contact-section .contact-info-list .contact-info {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    align-items: center;
+    /* border: 1px solid rgb(13, 196, 22); */
+  }
+  
+  .contact-section .contact-info-list .contact-info i {
+    font-size: var(--font-size-m);
+    /* border: 1px solid red; */
+  }
+ 
+
+
+  .contact-section .contact-form .form-input {
+     /* border: 1px solid red; */
+    width: 100%;
+    height: 50px;
+    padding: 0 12px;
+    outline: none;
+    margin-bottom: 16px;
+    font-size: var(--font-size-s);
+    border-radius: var(--border-radius-s);
+    border: 1px solid var(--medium-gray-color);
+  }
+  
+  .contact-section .contact-form {
+    max-width: 50%;
+  } 
+  
+ .contact-section .contact-form textarea.form-input {
+    height: 100px;
+    padding: 12px;
+    resize: vertical;
+  }
+   
+  .contact-section .contact-form .form-input:focus {
+    border-color: var(--secondary-color);
+  }
+  
+    .contact-section .contact-form .submit-button {
+    padding: 10px 28px;
+    outline: none;
+    margin-top: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-m);
+    background: var(--primary-color);
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    font-weight: var(--font-weight-medium);
+    transition: 0.3s ease;
+  } 
+  
+  .contact-section .contact-form .submit-button:hover {
+    color: var(--primary-color);
+    background: transparent;
+  }
+  
+
+ /* Footer section styling */
+.footer-section {
+    padding: 20px 0;
+    background: var(--dark-color);
+  }
