@@ -144,6 +144,7 @@ header {
 .banner-section {
     background-color: var(--primary-color);
     min-height: 100vh;
+    
 }
 
 
@@ -200,7 +201,7 @@ header {
     font-weight: var(--font-weight-semibold);
 }
 
-.section-content .first-details .descrption {
+.section-content .first-details .description {
     font-size: var(--font-size-m);
     margin: 24px 0 40px;
     max-width: 70%;
@@ -528,4 +529,30 @@ header {
 .footer-section {
     padding: 20px 0;
     background: var(--dark-color);
+    
   }
+  .footer-section .section-content{
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+   
+  }
+  
+  .footer-section .section-content .social-link-list{
+    padding-top: 0px;
+     margin: auto;
+  }
+
+  .footer-section .section-content .social-link-list .social-link{
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    transition: 0.2s ease;
+    text-decoration: none;
+  }
+  .policy-link{
+    color: white;
+  }
+
+
+
+  
